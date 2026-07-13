@@ -1,0 +1,15 @@
+Package: DAGmin
+Title: DAG-constrained Minimal Set Covers 
+Version: 0.0.1
+Authors@R: 
+    person("Robert", "Rovetti", , "rrovetti@lmu.edu", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
+Imports: 
+    Rfast,
+    kit,
+    utils
+    
