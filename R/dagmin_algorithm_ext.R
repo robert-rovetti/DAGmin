@@ -4,8 +4,10 @@
 #' @param G The adjacency matrix specifying the DAG, with added extension codes
 #' @param verbose Controls level of output
 #' @return A list of all rank-1 communities
-#' @examples
+#'
+#' @usage
 #' EXTCOMRANK1(S,G)
+#'
 .extcomrank1 <- function(S, G, verbose) {
 
   if (verbose) {cat(sprintf("\nCalculating extended community set\n"))}
@@ -39,8 +41,10 @@
 #' @param G The adjacency matrix specifying the DAG, with added extension codes
 #' @param verbose Controls level of output
 #' @return A list of all possible standard DAGs (one for each possible partition)
-#' @examples
+#'
+#' @usage
 #' EXTENDED.G(G)
+#'
 .extended.G <- function(G, verbose) {
 
   if (verbose) {cat(sprintf("\nEnumerating partitioned DAG scenarios ...\n"))}

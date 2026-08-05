@@ -4,7 +4,7 @@
 \alias{.extcomrank1}
 \title{Find all rank-1 communities under an extended DAG}
 \usage{
-.extcomrank1(S, G, verbose)
+EXTCOMRANK1(S,G)
 }
 \arguments{
 \item{S}{A matrix whose columns are the elements to be covered, and whose rows are the available subsets from which to build the covers}
@@ -18,7 +18,4 @@ A list of all rank-1 communities
 }
 \description{
 Find all rank-1 communities under an extended DAG
-}
-\examples{
-EXTCOMRANK1(S,G)
 }

@@ -4,7 +4,7 @@
 \alias{.getelders}
 \title{From a community, get the indices representing elder nodes}
 \usage{
-.getelders(A, G)
+.getelders(A, H)
 }
 \arguments{
 \item{A}{A community}
@@ -16,7 +16,4 @@ Return the vector of elder nodes of A
 }
 \description{
 From a community, get the indices representing elder nodes
-}
-\examples{
-GETELDERS(A, H)
 }

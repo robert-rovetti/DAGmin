@@ -4,7 +4,7 @@
 \alias{dagmin}
 \title{Find all minimally-consistent covers of a set subject to constraints specified by a DAG}
 \usage{
-dagmin(S, G, delimsep = ",", maxrank = NULL, verbose = FALSE)
+dagmin(S,G)
 }
 \arguments{
 \item{S}{A matrix whose columns are the elements to be covered, and whose rows are the available subsets from which to build the covers}
@@ -22,7 +22,4 @@ A list all minimally consistent covers and their s.flags and x.flags
 }
 \description{
 Find all minimally-consistent covers of a set subject to constraints specified by a DAG
-}
-\examples{
-dagmin(S,G)
 }

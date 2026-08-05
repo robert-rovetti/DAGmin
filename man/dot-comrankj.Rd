@@ -4,7 +4,7 @@
 \alias{.comrankj}
 \title{Internal routine to find all rank-j communities, using a list of rank-1 communities as building blocks}
 \usage{
-.comrankj(j, D)
+COMRANKJ(S,G)
 }
 \arguments{
 \item{j}{A positive integer specifying the desired rank}
@@ -16,7 +16,4 @@ A list of all rank-j communities
 }
 \description{
 Internal routine to find all rank-j communities, using a list of rank-1 communities as building blocks
-}
-\examples{
-COMRANKJ(S,G)
 }

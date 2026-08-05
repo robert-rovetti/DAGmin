@@ -4,7 +4,7 @@
 \alias{.sflags}
 \title{Returns the S-flags for a given community}
 \usage{
-.sflags(C, S)
+SFLAGS(C,S)
 }
 \arguments{
 \item{C}{A community}
@@ -16,7 +16,4 @@ Returns a table with members of S marked for each cover
 }
 \description{
 Returns the S-flags for a given community
-}
-\examples{
-SFLAGS(C,S)
 }

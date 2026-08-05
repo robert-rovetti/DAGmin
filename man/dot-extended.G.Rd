@@ -4,7 +4,7 @@
 \alias{.extended.G}
 \title{Creates a list of all possible partitions of an extended-choice DAG}
 \usage{
-.extended.G(G, verbose)
+EXTENDED.G(G)
 }
 \arguments{
 \item{G}{The adjacency matrix specifying the DAG, with added extension codes}
@@ -16,7 +16,4 @@ A list of all possible standard DAGs (one for each possible partition)
 }
 \description{
 Creates a list of all possible partitions of an extended-choice DAG
-}
-\examples{
-EXTENDED.G(G)
 }

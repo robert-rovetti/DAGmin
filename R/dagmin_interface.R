@@ -6,8 +6,10 @@
 #' @param maxrank The maximum rank community to consider
 #' @param verbose Controls level of output
 #' @return A list all minimally consistent covers and their s.flags and x.flags
-#' @examples
+#'
+#' @usage
 #' dagmin(S,G)
+#'
 #' @export
 dagmin <- function(S, G, delimsep = ',', maxrank = NULL, verbose = FALSE) {
 

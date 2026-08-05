@@ -4,7 +4,7 @@
 \alias{.comrank1}
 \title{Internal routine to find all rank-1 communities}
 \usage{
-.comrank1(S, G)
+comrank1(S,G)
 }
 \arguments{
 \item{S}{A matrix whose columns are the elements to be covered, and whose rows are the available subsets from which to build the covers}
@@ -16,7 +16,4 @@ A list of all rank-1 communities
 }
 \description{
 Internal routine to find all rank-1 communities
-}
-\examples{
-comrank1(S,G)
 }

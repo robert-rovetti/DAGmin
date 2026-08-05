@@ -4,7 +4,7 @@
 \alias{.isdominant}
 \title{Determines if a specified community is dominant}
 \usage{
-.isdominant(t, S, P)
+ISDOMINANT(t, S, P)
 }
 \arguments{
 \item{t}{A community}
@@ -18,7 +18,4 @@ TRUE if t is dominant;  FALSE otherwise
 }
 \description{
 Determines if a specified community is dominant
-}
-\examples{
-ISDOMINANT(t, S, P)
 }

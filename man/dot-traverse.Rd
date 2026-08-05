@@ -17,6 +17,3 @@ TBD
 \description{
 TBD
 }
-\examples{
-TRAVERSE(G, i)
-}

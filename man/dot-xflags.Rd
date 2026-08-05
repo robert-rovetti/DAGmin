@@ -4,7 +4,7 @@
 \alias{.xflags}
 \title{Returns the X-flags for a given community}
 \usage{
-.xflags(C, S)
+XFLAGS(C,S)
 }
 \arguments{
 \item{C}{A community}
@@ -16,7 +16,4 @@ Returns a table with members of X marked for each cover
 }
 \description{
 Returns the X-flags for a given community
-}
-\examples{
-XFLAGS(C,S)
 }

@@ -4,7 +4,7 @@
 \alias{.iswellformed}
 \title{Determines if a specified community is "well-formed"}
 \usage{
-.iswellformed(tr, j, G, P)
+ISWELLFORMED(tr,j,G,P)
 }
 \arguments{
 \item{tr}{A community}
@@ -20,7 +20,4 @@ TRUE if tr is well-formed;  FALSE otherwise
 }
 \description{
 Determines if a specified community is "well-formed"
-}
-\examples{
-ISWELLFORMED(tr,j,G,P)
 }

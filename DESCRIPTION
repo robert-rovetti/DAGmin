@@ -8,9 +8,7 @@ URL: https://dagmin.rovero.org
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 8.0.0
 Imports: 
     Rfast,
-    kit,
-    utils
-    
+    kit
+Config/roxygen2/version: 8.1.0

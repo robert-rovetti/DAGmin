@@ -17,6 +17,3 @@ The requested matrix
 \description{
 Internal helper function for getting input data
 }
-\examples{
-getinput(input, delimsep)
-}

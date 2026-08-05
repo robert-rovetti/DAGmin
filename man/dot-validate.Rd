@@ -4,7 +4,7 @@
 \alias{.validate}
 \title{Internal helper function for validating input data}
 \usage{
-.validate(S, G)
+.validate(S,G)
 }
 \arguments{
 \item{S}{The family of subsets}
@@ -16,7 +16,4 @@ No return value.  Stops program if validation not successful.
 }
 \description{
 Internal helper function for validating input data
-}
-\examples{
-validate(S,G)
 }

@@ -4,7 +4,7 @@
 \alias{.mcc_enum}
 \title{Main internal routine for enumeration}
 \usage{
-.mcc_enum(S, G, verbose)
+mcc_enum(S,G)
 }
 \arguments{
 \item{S}{A matrix whose columns are the elements to be covered, and whose rows are the available subsets from which to build the covers}
@@ -16,7 +16,4 @@ A list of all minimally consistent covers
 }
 \description{
 Main internal routine for enumeration
-}
-\examples{
-mcc_enum(S,G)
 }

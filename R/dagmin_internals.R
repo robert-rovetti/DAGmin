@@ -4,8 +4,10 @@
 #' @param input Either an existing matrix or a filename containing matrix in delimited text format
 #' @param delimsep The delimeter for reading a text file
 #' @return The requested matrix
-#' @examples
+#'
+#' @usage
 #' .getinput(input, delimsep)
+#'
 .getinput <- function(input, delimsep) {
 
   if (is.matrix(input)) {return(input)}
@@ -23,8 +25,10 @@
 #' @param S The family of subsets
 #' @param G The adjacency matrix
 #' @return No return value.  Stops program if validation not successful.
-#' @examples
+#'
+#' @usage
 #' .validate(S,G)
+#'
 .validate <- function(S,G){
 
   if (dim(G)[1] != dim(G)[2])         {stop("Adjacency matrix not square.")}
@@ -42,8 +46,10 @@
 #' @param G The DAG
 #' @param i Node number
 #' @return TBD
-#' @examples
+#'
+#' @usage
 #' .traverse(G, i)
+#'
 .traverse <- function(G, i) {
 
   deplst <- c(i)
@@ -61,8 +67,10 @@
 #' @param A A community
 #' @param G the DAG
 #' @return Return the vector of elder nodes of A
-#' @examples
+#'
+#' @usage
 #' .getelders(A, H)
+#'
 .getelders <- function(A, G) {
 
   if(length(A)==1) {return (A)}
@@ -81,8 +89,10 @@
 #' @param a A community, possibly a subset of b
 #' @param b The reference community
 #' @return TRUE if a is a superset of b;  FALSE otherwise
-#' @examples
+#'
+#' @usage
 #' .issuperset(a, b)
+#'
 .issuperset <- function(a,b) {
 
   #supersets in X.  a,b are 0,1-vectors whose columns are X
@@ -103,8 +113,10 @@
 #' @param G The DAG
 #' @param P matrix P
 #' @return TRUE if tr is well-formed;  FALSE otherwise
-#' @examples
+#'
+#' @usage
 #' ISWELLFORMED(tr,j,G,P)
+#'
 .iswellformed <- function(tr,j,G,P) {
 
   if (length(tr) <= 1)  {return(TRUE)}
@@ -124,8 +136,10 @@
 #' @param tr A community
 #' @param S The subset family
 #' @return TRUE if tr is a cover of S;  FALSE otherwise
-#' @examples
+#'
+#' @usage
 #' ISCOVER(tr, S)
+#'
 #' @export
 .iscover <- function(tr, S) {
 
@@ -148,8 +162,10 @@
 #'
 #' @param G An adjacency matrix
 #' @return TRUE if A represents a DAG;  FALSE otherwise
-#' @examples
+#'
+#' @usage
 #' ISDAG(G)
+#'
 .isdag <- function(G) {
 
   # works by computing the path matrix H
@@ -173,8 +189,10 @@
 #' @param C A community
 #' @param S The family of subsets
 #' @return Returns a table with members of S marked for each cover
-#' @examples
+#'
+#' @usage
 #' SFLAGS(C,S)
+#'
 .sflags <- function(C,S) {
 
   thisfun <- function(z) {
@@ -193,8 +211,10 @@
 #' @param C A community
 #' @param S The family of subsets
 #' @return Returns a table with members of X marked for each cover
-#' @examples
+#'
+#' @usage
 #' XFLAGS(C,S)
+#'
 .xflags <- function(C,S) {
 
   thisfun <- function(z) {

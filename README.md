@@ -7,23 +7,28 @@
 
 <!-- badges: end -->
 
-DAGmin implements an algorithm for the enumeration of all minimal,
-DAG-consistent covers (exact or not) of a set X. Covers are formed from
-combinations of defined subsets of X. Each defined subset is mapped to a
-node of a directed acyclic graph (DAG), creating relationships among the
-subsets. Acceptable covers must meet three criteria:
+DAGmin is an R package that implements an algorithm for the enumeration
+of all minimally-sized covers (exact or not) of a set X that are
+consistent with relationships established by a directed acyclic graph
+(DAG). Covers are formed from combinations of defined subsets of X, and
+each defined subset is mapped to a node of a DAG.
 
-1)  The coverage property: The union of all subsets contained in each
+An acceptable cover meets three criteria:
+
+1)  The coverage property: The union of all subsets contained in the
     cover is the set X.
 2)  The DAG-consistency property: If i -\> j is an edge in the DAG, then
     any cover that includes subset i must also include subset j.
-3)  The minimality property: If any subset is removed from a cover, it
+3)  The minimality property: If any subset is removed from the cover, it
     breaks properties (1) or (2) or both.
 
-## Installation
+## Installation in R
 
 This package is in the development stage! Feedback and questions are
-welcome. You can install the development version of DAGmin by running:
+welcome.
+
+Code is available at <https://github.com/robert-rovetti/DAGmin>. You can
+install the development version of DAGmin in R by running:
 
 ``` r
 library(pak)
@@ -35,6 +40,10 @@ pak("robert-rovetti/DAGmin")
 Let’s start with a simple set X = {x1, x2, x3, x4, x5}, and then take
 various subsets of X. The subsets are named s1 through s8, and together
 form the family S of subsets.
+
+    #> Warning: Package `magick` is required to draw images. Image not drawn.
+    #> Warning: Package `magick` is required to draw images. Image not drawn.
+
 <img src="man/figures/side_by_side-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 The subsets are also related to each other through this DAG, where the
 arrows indicate *requirement*.
@@ -50,6 +59,7 @@ by zero-one matrices:
 ``` r
 S <- as.matrix(read.csv('http://dagmin.rovero.org/data/S.csv', header=FALSE, row.names=NULL))
 G <- as.matrix(read.csv('http://dagmin.rovero.org/data/G.csv', header=FALSE, row.names=NULL))
+
 S
 #>      V1 V2 V3 V4 V5
 #> [1,]  1  1  0  1  1
@@ -60,6 +70,7 @@ S
 #> [6,]  0  0  1  1  0
 #> [7,]  0  1  1  1  0
 #> [8,]  0  1  0  1  0
+
 G
 #>      V1 V2 V3 V4 V5 V6 V7 V8
 #> [1,]  0  0  0  0  0  0  0  0

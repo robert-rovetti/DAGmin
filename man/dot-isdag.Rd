@@ -4,7 +4,7 @@
 \alias{.isdag}
 \title{Determines if given adjacency matrix represents a DAG}
 \usage{
-.isdag(G)
+ISDAG(G)
 }
 \arguments{
 \item{G}{An adjacency matrix}
@@ -14,7 +14,4 @@ TRUE if A represents a DAG;  FALSE otherwise
 }
 \description{
 Determines if given adjacency matrix represents a DAG
-}
-\examples{
-ISDAG(G)
 }

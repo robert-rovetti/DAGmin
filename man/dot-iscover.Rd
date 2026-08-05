@@ -4,7 +4,7 @@
 \alias{.iscover}
 \title{User utility to determine if a specified community is a valid cover}
 \usage{
-.iscover(tr, S)
+ISCOVER(tr, S)
 }
 \arguments{
 \item{tr}{A community}
@@ -16,7 +16,4 @@ TRUE if tr is a cover of S;  FALSE otherwise
 }
 \description{
 User utility to determine if a specified community is a valid cover
-}
-\examples{
-ISCOVER(tr, S)
 }

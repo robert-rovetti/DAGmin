@@ -17,6 +17,3 @@ TRUE if a is a superset of b;  FALSE otherwise
 \description{
 Determines if one community is a superset of another
 }
-\examples{
-ISSUPERSET(a, b)
-}
