@@ -1,0 +1,16 @@
+Package: DAGmin
+Title: DAG-constrained Minimal Set Covers 
+Version: 0.0.1
+Authors@R: 
+    person("Robert", "Rovetti", email = "robert.rovetti@lmu.edu", role = c("aut", "cre"))
+Description: Finds all minimally-consistent covers of a set, subject to constraints specified by a directed acyclic graph.
+URL: https://dagmin.rovero.org 
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
+Imports: 
+    Rfast,
+    kit,
+    utils
+    

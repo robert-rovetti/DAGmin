@@ -1,0 +1,67 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/",
+  out.width = "100%"
+)
+```
+
+# DAGmin
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+DAGmin implements an algorithm for the enumeration of all minimal, DAG-consistent covers (exact or not) of a set X.  Covers are formed from combinations of defined subsets of X.  Each defined subset is mapped to a node of a directed acyclic graph (DAG), creating relationships among the subsets.  Acceptable covers must meet three criteria:
+
+(1) The coverage property: The union of all subsets contained in each cover is the set X.
+(2) The DAG-consistency property:  If i -> j is an edge in the DAG, then any cover that includes subset i must also include subset j.
+(3) The minimality property: If any subset is removed from a cover, it breaks properties (1) or (2) or both.
+
+## Installation
+
+This package is in the development stage!  Feedback and questions are welcome.  You can install the development version of DAGmin by running:
+
+``` r
+library(pak)
+pak("robert-rovetti/DAGmin")
+```
+
+## Example
+
+Let's start with a simple set X = {x1, x2, x3, x4, x5}, and then take various subsets of X.  The subsets are named s1 through s8, and together form the family S of subsets.
+```{r side_by_side, echo=FALSE, fig.align='center'}
+library(cowplot)
+ggdraw() + 
+  draw_image("man/figures/S.png", width = 0.4) + 
+  draw_image("man/figures/G.png", width = 0.4, x = 0.5)
+```
+The subsets are also related to each other through this DAG, where the arrows indicate _requirement_. 
+
+The goal is to find various combinations of the subsets such that all elements of X are represented at least once (duplications are OK), _and_ such that the requirement criteria are also met, _and_ such that the combinations are "minimal" in size (ie, no unnecessary subsets).
+
+Both the subset matrix and the DAG adjacency matrix can be represented by zero-one matrices:
+
+```{r example}
+S <- as.matrix(read.csv('http://dagmin.rovero.org/data/S.csv', header=FALSE, row.names=NULL))
+G <- as.matrix(read.csv('http://dagmin.rovero.org/data/G.csv', header=FALSE, row.names=NULL))
+
+S
+
+G
+```
+Calling DAGmin is a simple matter of supplying the subset matrix (S) and the DAG adjacency matrix (G):
+```{r example2}
+library(DAGmin)
+results <- dagmin(S,G)
+```
+We can view the generated covers to see which subsets are in each cover:
+```{r example 3}
+results$covers
+```

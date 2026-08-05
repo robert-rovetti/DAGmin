@@ -1,0 +1,13 @@
+.Rproj.user
+.Rproj
+.Rhistory
+.Rdata
+.RData
+.Rbuildignore
+.httr-oauth
+.DS_Store
+.quarto
+docs/
+other/
+_pkgdown.yml
+DAGmin.Rproj
