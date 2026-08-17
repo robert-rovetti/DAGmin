@@ -16,39 +16,37 @@ knitr::opts_chunk$set(
 # DAGmin
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-DAGmin is an R package that implements an algorithm for the enumeration of all minimally-sized covers (exact or not) of a set X that are consistent with relationships established by a directed acyclic graph (DAG).   Covers are formed from combinations of defined subsets of X, and each defined subset is mapped to a node of a DAG. 
+DAGmin is an R package that implements an algorithm for the enumeration of all minimally-sized covers (exact or not) of a set X that are consistent with relationships established by a directed acyclic graph (DAG). Covers are formed from combinations of defined subsets of X, and each defined subset is mapped to a node of a DAG.
 
 An acceptable cover meets three criteria:
 
 (1) The coverage property: The union of all subsets contained in the cover is the set X.
-(2) The DAG-consistency property:  If i -> j is an edge in the DAG, then any cover that includes subset i must also include subset j.
+(2) The DAG-consistency property: If i -\> j is an edge in the DAG, then any cover that includes subset i must also include subset j.
 (3) The minimality property: If any subset is removed from the cover, it breaks properties (1) or (2) or both.
 
 ## Installation in R
 
 This package is in the development stage! Feedback and questions are welcome.
 
-Code is available at https://github.com/robert-rovetti/DAGmin.  You can install the development version of DAGmin in R by running:
+Code is available at <https://github.com/robert-rovetti/DAGmin>. You can install the development version of DAGmin in R by running:
 
-``` r
+```         
 library(pak)
 pak("robert-rovetti/DAGmin")
 ```
 
 ## Example
 
-Let's start with a simple set X = {x1, x2, x3, x4, x5}, and then take various subsets of X.  The subsets are named s1 through s8, and together form the family S of subsets.
-```{r side_by_side, echo=FALSE, fig.align='center'}
-library(cowplot)
-ggdraw() + 
-  draw_image("man/figures/S.png", width = 0.4) + 
-  draw_image("man/figures/G.png", width = 0.4, x = 0.5)
-```
-The subsets are also related to each other through this DAG, where the arrows indicate _requirement_. 
+Let's start with a simple set X = {x1, x2, x3, x4, x5}, and then take various subsets of X. The subsets are named s1 through s8, and together form the family S of subsets. In the table, the columns are the elements of the set X, and the rows indicate the various subsets of X.
 
-The goal is to find various combinations of the subsets such that all elements of X are represented at least once (duplications are OK), _and_ such that the requirement criteria are also met, _and_ such that the combinations are "minimal" in size (ie, no unnecessary subsets).
+![](man/figures/side_by_side.png){width="665"}
+
+The subsets are also related to each other through the DAG, where the arrows indicate *requirement*. Each node in the DAG maps to one of the rows of the table.
+
+The goal is to find various combinations of the subsets such that all elements of X are represented at least once (duplications are OK), *and* such that the requirement criteria are also met, *and* such that the combinations are "minimal" in size (ie, no unnecessary subsets).
 
 Both the subset matrix and the DAG adjacency matrix can be represented by zero-one matrices:
 
@@ -60,12 +58,16 @@ S
 
 G
 ```
+
 Calling DAGmin is a simple matter of supplying the subset matrix (S) and the DAG adjacency matrix (G):
+
 ```{r example2}
 library(DAGmin)
 results <- dagmin(S,G)
 ```
+
 We can view the generated covers to see which subsets are in each cover:
+
 ```{r example 3}
 results$covers
 ```

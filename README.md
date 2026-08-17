@@ -30,23 +30,21 @@ welcome.
 Code is available at <https://github.com/robert-rovetti/DAGmin>. You can
 install the development version of DAGmin in R by running:
 
-``` r
-library(pak)
-pak("robert-rovetti/DAGmin")
-```
+    library(pak)
+    pak("robert-rovetti/DAGmin")
 
 ## Example
 
 Let’s start with a simple set X = {x1, x2, x3, x4, x5}, and then take
 various subsets of X. The subsets are named s1 through s8, and together
-form the family S of subsets.
+form the family S of subsets. In the table, the columns are the elements
+of the set X, and the rows indicate the various subsets of X.
 
-    #> Warning: Package `magick` is required to draw images. Image not drawn.
-    #> Warning: Package `magick` is required to draw images. Image not drawn.
+<img src="man/figures/side_by_side.png" width="665" />
 
-<img src="man/figures/side_by_side-1.png" alt="" width="100%" style="display: block; margin: auto;" />
-The subsets are also related to each other through this DAG, where the
-arrows indicate *requirement*.
+The subsets are also related to each other through the DAG, where the
+arrows indicate *requirement*. Each node in the DAG maps to one of the
+rows of the table.
 
 The goal is to find various combinations of the subsets such that all
 elements of X are represented at least once (duplications are OK), *and*
